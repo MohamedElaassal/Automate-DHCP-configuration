@@ -3,7 +3,7 @@
 Automate-DHCP-Configuration is a script written in the C programming language that automates the entire process of configuring a DHCP server on a Linux server. Although Fedora is used as an example, understanding its workflow allows you to modify it to work with similar distributions, such as CentOS, Red Hat, and others.
 
 <h2>Why was Automate-DHCP-Configuration developed?</h2>
-This script was developed to simplify and streamline the process of setting up a DHCP server in Linux environments. Configuring a DHCP server manually can be time-consuming and prone to errors, particularly for users who are new to server administration or those managing multiple deployments. By automating the configuration process, this script makes it easier and faster to set up a reliable DHCP server on Fedora and other similar distributions. Users can also adapt the script to fit various Linux distributions, enhancing flexibility and saving time across different server environments.
+This script simplifies the setup of a DHCP server in Linux environments, reducing the time and errors associated with manual configuration. It automates the process, making it quicker and easier to establish a reliable DHCP server on Fedora and similar distributions. Users can also modify the script for different Linux distributions, enhancing flexibility and saving time.
 
 <h2>Functionalities</h2>
 
@@ -27,3 +27,22 @@ It appends the necessary subnet and option settings to the `/etc/dhcp/dhcpd.conf
 
 <h4>Service Management</h4>
 Finally, the script restarts and enables the DHCP service, ensuring that it runs on system startup.
+
+<h2>Usage</h2>
+
+If you have a Fedora Server Edition version 38 or higher and the `dnf` package manager, you shouldn't encounter any issues. It is recommended to keep the network interface card (NIC) set as NAT to avoid installation problems, as an internet connection is necessary to install the `dhcp-server` package.
+
+Follow these steps to use the script:
+
+1. Launch a terminal.
+2. Compile and execute the code from the terminal with superuser privileges.
+3. You can easily configure the DHCP server by entering the following parameters:
+   - NIC name
+   - IPv4 address to assign
+   - Subnet prefix
+   - Gateway IP address
+   - DHCP range
+   - Default lease time
+   - Maximum lease time
+
+
